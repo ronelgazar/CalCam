@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "555764493924",
+    "project_id": "cal-cam-ed38b",
+    "storage_bucket": "cal-cam-ed38b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555764493924:android:7c90a2615a095d89c27971",
+        "android_client_info": {
+          "package_name": "com.RonElgazar.calcam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555764493924-tsqbcm8oho2bv16op9v1dvskbvq7ssal.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.RonElgazar.calcam",
+            "certificate_hash": "7c5fabc1d308fc99eb70c849de1d9e83122ff218"
+          }
+        },
+        {
+          "client_id": "555764493924-44t1a9586g84p3su7naiiaj0l8bj4apg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF3r8fSFWBp4OGjBfvCUDhqCB1J47R0Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555764493924-44t1a9586g84p3su7naiiaj0l8bj4apg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
