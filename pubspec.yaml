@@ -41,6 +41,7 @@ dependencies:
   firebase_crashlytics: ^0.4.0+1
   firebase_database: ^6.0.0
   step_progress_indicator: ^0.2.5+8
+  random_color: ^1.0.5
 
 
 dev_dependencies:

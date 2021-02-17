@@ -2,15 +2,15 @@ import 'package:calcam/Utils/Constants.dart';
 import 'package:calcam/widgets/PageNavigator.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:calcam/screens/HomeScreen.dart';
 
-Widget exit(){
-  return IconButton(icon:Icon(Icons.close,color: Colors.black54), onPressed: () {navigator();},
-);}
+Widget exit(BuildContext context){
+  return IconButton(icon:Icon(Icons.close,color: Colors.black54),  onPressed: () => Navigator.of(context).pop(null),);}
 
 
 Widget progressBar(int currentStep){
   return 
-  Container(width: 300, child:  
+  Container(width: ProgressBarConstants.PROGRESS_BAR_WIDTH, child:  
    StepProgressIndicator(
     totalSteps: ProgressBarConstants.PROGRESS_BAR_TOTAL_STEPS,
      currentStep: currentStep,
@@ -36,11 +36,11 @@ Widget progressBar(int currentStep){
   ));
 }
 
-Widget practiceAppBar(){
+Widget practiceAppBar(BuildContext context){
   return AppBar      (
         elevation: 2.0,
         backgroundColor: Colors.white,
-        title:exit(),
+        title:exit(context),
         actions: <Widget>
         [
           
