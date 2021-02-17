@@ -1,11 +1,13 @@
+import 'package:calcam/screens/practice.dart';
+import 'package:calcam/widgets/HomeAppBar.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:calcam/services/sign_in.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:calcam/screens/loginScreen.dart';
+import 'package:firebase_performance/firebase_performance.dart';
+import 'package:calcam/widgets/BuildTile.dart';
 
-
+FirebaseAnalytics analytics;
 class HomeScreen extends StatefulWidget
 {
   @override
@@ -15,101 +17,23 @@ class HomeScreen extends StatefulWidget
 class _HomeScreenState extends State<HomeScreen>
 {
 
-Widget account(){
-  
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    CircleAvatar(backgroundImage: NetworkImage(imageUrl),
-    radius: 15,)
-    
-  ,],);
- }
-
-Widget points(){
-  return Row(children: [Text('150', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w700, fontSize: 15.0),),
-                Icon(MdiIcons.starFourPoints, color: Colors.red),]);                
-
-
-}
-
-Widget accountPopMenu() {
-  return Column(
-    children:
-        [PopupMenuButton(
-        onSelected: (value) {
-          Fluttertoast.showToast(
-              msg: "You have selected " + value.toString(),
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.BOTTOM,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.black,
-              textColor: Colors.white,
-              fontSize: 15.0
-          );
-        },
-        itemBuilder: (context) => [
-          PopupMenuItem(
-            value: 1,
-              child: Row(
-              children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(2, 2, 8, 2),
-                child: GestureDetector(child:Text("log out"),
-                  onTap: () {
-                    signOutGoogle();
-                    Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => LoginScreen()));
-                  },),
-              ),
-        ],
-    )),
-          PopupMenuItem(
-              value: 2,
-              child: Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(2, 2, 8, 2),
-                child: Icon(Icons.settings),
-              ),
-              Text('settings')
-            ],
-          )),
-        ],icon: account()),
-      ]);
-}
-
-
+  perfTrace() async{
+    Trace trace = FirebasePerformance.instance.newTrace('HomeScreen_trace');
+    trace.start();
+    await Future.delayed(Duration(seconds: 5));
+    trace.stop();
+  }
 
 
 
   @override
   Widget build(BuildContext context)
   {
+    analytics = FirebaseAnalytics();
+
     return Scaffold
     (
-      appBar: AppBar
-      (
-        elevation: 2.0,
-        backgroundColor: Colors.white,
-        title:points(),
-        actions: <Widget>
-        [
-          
-          Container
-          (
-            child: Row
-            (
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>
-              [
-                accountPopMenu(),
-              ],
-            ),
-          )
-        ],
-      ),
+      appBar: homeAppBar(),
       body: 
       StaggeredGridView.count(
         crossAxisCount: 2,
@@ -117,16 +41,16 @@ Widget accountPopMenu() {
         mainAxisSpacing: 12.0,
         padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
         children: <Widget>[
-          _buildTile(
+          buildTile(
             Padding
             (
               padding: const EdgeInsets.all(24.0),
             ),
           ),
           //  MaterialPageRoute(builder: (context) => LoginScreen()
-          InkWell(
-            child:
-          _buildTile(
+
+          buildTile(
+
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: Column
@@ -151,10 +75,10 @@ Widget accountPopMenu() {
                   ,
                 ]
               ),
-          ),),
-          onTap:() =>  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => LoginScreen())) ,),
-          _buildTile(
+          )          ,onTap:() => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Practice())) ,),
+
+          buildTile(
             Padding
             (
               padding: const EdgeInsets.all(24.0),
@@ -181,7 +105,7 @@ Widget accountPopMenu() {
               ),
             ),
           ),
-          _buildTile(
+          buildTile(
             Padding
                 (
                   padding: const EdgeInsets.all(24.0),
@@ -214,7 +138,7 @@ Widget accountPopMenu() {
                   )
                 ),
           ),
-          _buildTile(
+          buildTile(
             Padding
             (
               padding: const EdgeInsets.all(24.0),
@@ -264,18 +188,5 @@ Widget accountPopMenu() {
     );
   }
 
-  Widget _buildTile(Widget child, {Function() onTap}) {
-    return Material(
-      elevation: 14.0,
-      borderRadius: BorderRadius.circular(12.0),
-      shadowColor: Color(0x802196F3),
-      child: InkWell
-      (
-        // Do onTap() if it isn't null, otherwise do print()
-        onTap: onTap != null ? () => onTap() : () { print('Not set yet'); },
-        child: child
-      )
-    );
-  }
 }
 
