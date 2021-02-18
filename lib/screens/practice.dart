@@ -19,6 +19,6 @@ class _PracticeState extends State<Practice> {
         /** Card Widget **/
         child: practiceCard(getRandomColor(),Center(child:CircleAvatar(child: CircleAvatar(child:Icon(Icons.face))),
         ), //Card  //Center //Scaffold 
-    ),),); //
+    ),),)); //
   }
 }
