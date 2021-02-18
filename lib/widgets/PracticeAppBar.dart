@@ -1,9 +1,11 @@
 import 'package:calcam/Utils/Constants.dart';
+import 'package:calcam/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 Widget exit(BuildContext context){
-  return IconButton(icon:Icon(Icons.close,color: Colors.black54),  onPressed: () =>print("bruh"),);}
+  return IconButton(icon:Icon(Icons.close,color: Colors.black54),  onPressed:() => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) =>HomeScreen())));}
 
 
 Widget progressBar(int currentStep){

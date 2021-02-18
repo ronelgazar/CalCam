@@ -1,3 +1,4 @@
+import 'package:calcam/screens/PracticeChooser.dart';
 import 'package:calcam/screens/practice.dart';
 import 'package:calcam/widgets/HomeAppBar.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -76,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen>
                 ]
               ),
           )          ,onTap:() => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => Practice())) ,),
+                    MaterialPageRoute(builder: (context) => PracticeChooser())) ,),
 
           buildTile(
             Padding

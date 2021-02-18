@@ -8,16 +8,18 @@ class Practice extends StatefulWidget {
 }
 
 class _PracticeState extends State<Practice> {
-
   @override
   Widget build(BuildContext context) {
-   return new MaterialApp( 
-    home: Scaffold( 
-      appBar: practiceAppBar(context), //AppBar 
-      body: Center( 
+    return new MaterialApp(
+        home: Scaffold(
+      appBar: practiceAppBar(context), //AppBar
+      body: Center(
         /** Card Widget **/
-        child: practiceCard(Center(child:CircleAvatar(child: CircleAvatar(child:Icon(Icons.face))),
-        ), //Card  //Center //Scaffold 
-    ),),)); //
+        child: practiceCard(
+          Center(
+            child: Text('hi'),)),
+          ), //Card  //Center //Scaffold
+        ),
+    ); //
   }
 }
