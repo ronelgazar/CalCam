@@ -1,11 +1,9 @@
 import 'package:calcam/Utils/Constants.dart';
-import 'package:calcam/widgets/PageNavigator.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
-import 'package:calcam/screens/HomeScreen.dart';
 
 Widget exit(BuildContext context){
-  return IconButton(icon:Icon(Icons.close,color: Colors.black54),  onPressed: () => Navigator.of(context).pop(null),);}
+  return IconButton(icon:Icon(Icons.close,color: Colors.black54),  onPressed: () =>print("bruh"),);}
 
 
 Widget progressBar(int currentStep){
@@ -23,15 +21,15 @@ Widget progressBar(int currentStep){
      selectedGradientColor: LinearGradient(
          begin: Alignment.topLeft,
          end: Alignment.bottomRight,
-         colors: [Colors.yellowAccent, Colors.greenAccent],
+         colors: ProgressBarConstants.PROGRESS_BAR_PROGRRSS_COLORS,
 
      ),
      
      unselectedGradientColor: LinearGradient(
          begin: Alignment.topLeft,
          end: Alignment.bottomRight,
-         colors: [ProgressBarConstants.PROGRESS_BAR_OUTLINE_COLOR,ProgressBarConstants.PROGRESS_BAR_OUTLINE_COLOR
-         ]),
+         colors: ProgressBarConstants.PROGRESS_BAR_OUTLINE_COLORS
+         ),
          
   ));
 }
@@ -52,7 +50,7 @@ Widget practiceAppBar(BuildContext context){
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>
               [
-                progressBar(68),
+                progressBar(69),
               ],
             ),
           )

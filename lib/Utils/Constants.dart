@@ -7,8 +7,11 @@ class Constants {
 class ProgressBarConstants{
     static final double PROGRESS_BAR_WIDTH = 300;
     static final int PROGRESS_BAR_TOTAL_STEPS = 100;
-    static final Color PROGRESS_BAR_OUTLINE_COLOR = Colors.grey[400];
+    static final List<Color>  PROGRESS_BAR_OUTLINE_COLORS = [Colors.grey[400],Colors.grey[400]]; 
+    static final List<Color>  PROGRESS_BAR_PROGRRSS_COLORS = [Colors.yellowAccent, Colors.greenAccent];
 }
 class BuildTileConstants{
   static final Color BUILD_TILE_SHADOW_COLOR = Color(0x802196F3);
+
+
 }

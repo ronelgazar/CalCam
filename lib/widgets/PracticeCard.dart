@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
 
-Widget practiceCard(Color color,Widget child){
+import 'package:calcam/Utils/RandomColor.dart';
+
+Widget practiceCard(Widget child){
   return Card( 
           elevation: 50, 
           shadowColor: Colors.black, 
-          color: color, 
+          color: getRandomColor(), 
           child: SizedBox( 
             width: 300, 
             height: 500, 

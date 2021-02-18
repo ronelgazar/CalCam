@@ -1,4 +1,3 @@
-import 'package:calcam/Utils/RandomColor.dart';
 import 'package:calcam/widgets/PracticeCard.dart';
 import 'package:flutter/material.dart';
 import 'package:calcam/widgets/PracticeAppBar.dart';
@@ -17,7 +16,7 @@ class _PracticeState extends State<Practice> {
       appBar: practiceAppBar(context), //AppBar 
       body: Center( 
         /** Card Widget **/
-        child: practiceCard(getRandomColor(),Center(child:CircleAvatar(child: CircleAvatar(child:Icon(Icons.face))),
+        child: practiceCard(Center(child:CircleAvatar(child: CircleAvatar(child:Icon(Icons.face))),
         ), //Card  //Center //Scaffold 
     ),),)); //
   }
