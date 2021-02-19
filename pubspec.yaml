@@ -41,7 +41,10 @@ dependencies:
   firebase_crashlytics: ^0.4.0+1
   firebase_database: ^6.0.0
   step_progress_indicator: ^0.2.5+8
-
+  tflite: ^1.1.1
+  image_picker: ^0.6.7+22
+  image: ^2.1.19
+  camera: ^0.7.0+2
 
 dev_dependencies:
   flutter_test:

@@ -136,8 +136,9 @@ class _HomeScreenState extends State<HomeScreen>
                       Padding(padding: EdgeInsets.only(bottom: 4.0)),
                     ],
                   )
-                ),
-          ),
+                ), 
+           onTap:() => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Practice())),),
           buildTile(
             Padding
             (
