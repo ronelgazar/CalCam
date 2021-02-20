@@ -48,6 +48,7 @@ Future<String> signInWithGoogle() async {
   return null;
 }
 
+// ignore: missing_return
 Future<Widget> signOutGoogle() async {
-  await googleSignIn.signOut();
+   await googleSignIn.signOut();
 }

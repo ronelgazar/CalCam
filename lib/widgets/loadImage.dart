@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:calcam/services/getPracticeImage.dart';
 
 Widget loadLettersImage(BuildContext context,String image){
-  FutureBuilder(
+  return FutureBuilder(
   future: getImage(context, image),
   builder: (context, snapshot){
     if(snapshot.connectionState == ConnectionState.done){
@@ -21,10 +21,7 @@ Widget loadLettersImage(BuildContext context,String image){
         child: CircularProgressIndicator(),
       );
     }
-
-    if(snapshot.connectionState == ConnectionState.none){
-      return Container(child:Text("connection failed"));
-    }
+    
 
     return Container();
   }
