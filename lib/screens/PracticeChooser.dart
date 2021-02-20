@@ -1,9 +1,6 @@
 import 'package:calcam/screens/practice.dart';
-import 'package:calcam/widgets/BuildTile.dart';
 import 'package:calcam/widgets/PracticeAppBar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class PracticeChooser extends StatefulWidget {
   PracticeChooser({Key key}) : super(key: key);

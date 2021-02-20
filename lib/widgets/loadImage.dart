@@ -22,6 +22,10 @@ Widget loadLettersImage(BuildContext context,String image){
       );
     }
 
+    if(snapshot.connectionState == ConnectionState.none){
+      return Container(child:Text("connection failed"));
+    }
+
     return Container();
   }
   );

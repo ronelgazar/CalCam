@@ -1,4 +1,4 @@
-import 'package:calcam/screens/PracticeChooser.dart';
+
 import 'package:calcam/screens/practice.dart';
 import 'package:calcam/widgets/HomeAppBar.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';

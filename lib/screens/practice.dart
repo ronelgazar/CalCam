@@ -16,11 +16,8 @@ class _PracticeState extends State<Practice> {
       appBar: practiceAppBar(context), //AppBar
       body: Center(
         /** Card Widget **/
-        child: practiceCard(
-          Center(
-            child: loadLettersImage(context,'letters/א.png'),)),
+        child: practiceCard(loadLettersImage(context,'letters/א.png'),)),
           ), //Card  //Center //Scaffold
-        ),
     ); //
   }
 }
