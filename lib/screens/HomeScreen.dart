@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen>
                 ]
               ),
           )          ,onTap:() => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => PracticeChooser())) ,),
+                    MaterialPageRoute(builder: (context) => Practice())),),
 
           buildTile(
             Padding

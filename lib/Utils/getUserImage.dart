@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../screens/loginScreen.dart';
 String ImgUrl;
 String userImageUrl = FirebaseAuth.instance.currentUser.photoURL;
-Widget getImage(){
+Widget getUserProfilePic(){
   if(userImageUrl == ''){
 
     return LoginScreen();

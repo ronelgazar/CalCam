@@ -1,4 +1,5 @@
 import 'package:calcam/widgets/PracticeCard.dart';
+import 'package:calcam/widgets/loadImage.dart';
 import 'package:flutter/material.dart';
 import 'package:calcam/widgets/PracticeAppBar.dart';
 
@@ -17,7 +18,7 @@ class _PracticeState extends State<Practice> {
         /** Card Widget **/
         child: practiceCard(
           Center(
-            child: Text('hi'),)),
+            child: loadLettersImage(context,'letters/א.png'),)),
           ), //Card  //Center //Scaffold
         ),
     ); //

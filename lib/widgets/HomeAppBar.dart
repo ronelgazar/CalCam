@@ -1,4 +1,4 @@
-import 'package:calcam/Utils/getImage.dart';
+import 'package:calcam/Utils/getUserImage.dart';
 import 'package:calcam/screens/loginScreen.dart';
 import 'package:calcam/services/sign_in.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ Widget account(){
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      getImage(),],);
+      getUserProfilePic(),],);
  }
 
 Widget points(){
