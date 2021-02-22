@@ -1,3 +1,4 @@
+import 'package:calcam/Utils/getDocUid.dart';
 import 'package:calcam/screens/HomeScreen.dart';
 import 'package:calcam/services/authentication.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -31,19 +32,15 @@ class AddUser extends StatelessWidget {
     }
   @override
   Widget build(BuildContext context) {
-        final User user = FirebaseAuth.instance.currentUser;
-        final uid = user.uid;
-    // Create a CollectionReference called users that references the firestore collection
-    DocumentReference users = FirebaseFirestore.instance.collection('users').doc(uid);
 
+    // Create a CollectionReference called users that references the firestore collection
+    DocumentReference users = getDoc();
+    final uid = getUid();
     checkExist() {
-    bool exists = false;
-      FirebaseFirestore.instance.doc("users/$uid").get().then((doc) {
+      FirebaseFirestore.instance.doc("users/$uid").get().then((doc) { //checks for existing document with user info
         if (doc.exists){
-        exists = true;
         print('bruh$userId');
         }else{
-          exists = false;
           addUser(users);
           print('unbruh$userId');
       }});

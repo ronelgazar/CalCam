@@ -1,4 +1,5 @@
 import 'package:calcam/Utils/Constants.dart';
+import 'package:calcam/services/UpdateDocument.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
@@ -7,6 +8,7 @@ class ProgressBar extends StatefulWidget {
 
   @override
   _ProgressBatState createState() => _ProgressBatState();
+  
 }
 
 class _ProgressBatState extends State<ProgressBar> {
@@ -18,10 +20,14 @@ class _ProgressBatState extends State<ProgressBar> {
     return GestureDetector( 
       onTap: (){
         setState((){
+          
             if(currentStep>=ProgressBarConstants.PROGRESS_BAR_TOTAL_STEPS){
+              UpdateDoc('progress',currentStep);
               return currentStep = 0;
+              
               }
-              return currentStep++;
+            UpdateDoc('progress',currentStep);
+            return currentStep++;
         });
       },
       child: 
