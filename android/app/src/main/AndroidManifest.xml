@@ -2,7 +2,9 @@
     package="com.RonElgazar.calcam">
    <application
         android:label="calcam"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher">
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

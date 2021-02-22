@@ -1,6 +1,8 @@
+import 'package:calcam/services/addUserToDatabase.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
-import 'package:calcam/services/sign_in.dart';
+import 'package:calcam/services/authentication.dart';
+
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -20,15 +22,14 @@ class _LoginScreenState extends State<LoginScreen> {
             children: <Widget>[
               Text("CalCam",style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w700, fontSize: 30.0)),// TODO: create an icon and splash screen
               SizedBox(height: 50),
-              _signInButton(),
+              _signInButton(context),
             ],
           ),
         ),
       ),
     );
   }
-
-Widget _signInButton() {
+Widget _signInButton(BuildContext context) {
     return OutlineButton(
       splashColor: Colors.grey,
       onPressed: () {
@@ -37,12 +38,13 @@ Widget _signInButton() {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) {
-            return HomeScreen();
-          },
-        ),
-      );
+            return AddUser(name,email,0,0,'student');
+           },
+          ),
+        );
+     }
     }
-  });
+  );
 },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       highlightElevation: 0,
@@ -68,4 +70,5 @@ Widget _signInButton() {
         ),
       ),
     );
-}}
+  }
+}

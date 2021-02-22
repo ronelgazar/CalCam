@@ -1,8 +1,7 @@
 import 'package:calcam/Utils/getUserImage.dart';
 import 'package:calcam/screens/loginScreen.dart';
-import 'package:calcam/services/sign_in.dart';
+import 'package:calcam/services/authentication.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 Widget account(){
@@ -24,17 +23,6 @@ Widget accountPopMenu() {
   return Column(
     children:
         [PopupMenuButton(
-        onSelected: (value) {
-          Fluttertoast.showToast(
-              msg: "You have selected " + value.toString(),
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.BOTTOM,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.black,
-              textColor: Colors.white,
-              fontSize: 15.0
-          );
-        },
         itemBuilder: (context) => [
           PopupMenuItem(
             value: 1,

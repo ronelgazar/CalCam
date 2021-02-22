@@ -1,7 +1,5 @@
-import 'package:calcam/Utils/Constants.dart';
 import 'package:calcam/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:calcam/widgets/progressBar.dart';
 
 Widget exit(BuildContext context){

@@ -1,3 +1,4 @@
+import 'package:calcam/Utils/RandomLetter.dart';
 import 'package:calcam/widgets/PracticeCard.dart';
 import 'package:calcam/widgets/loadImage.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _PracticeState extends State<Practice> {
       appBar: practiceAppBar(context), //AppBar
       body: Center(
         /** Card Widget **/
-        child: practiceCard(loadLettersImage(context,'letters/א.png'),)),
+        child: practiceCard(loadLettersImage(context,'letters/'+generatelater()+'.png'),)),
           ), //Card  //Center //Scaffold
     ); //
   }

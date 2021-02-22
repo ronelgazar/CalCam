@@ -18,8 +18,9 @@ class _PracticeChooserState extends State<PracticeChooser> {
       
     Container(
         child:
-        FlatButton(color: Colors.orange,child: Text("hi"),onPressed:() => Navigator.of(context).pushReplacement(
+        Center(child:
+        FlatButton(color: Colors.orange,child: Text("התחל תרגול עם תמונות"),onPressed:() => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) =>Practice()),)
-  )));
+     ) )));
   }
 }
