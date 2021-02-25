@@ -43,7 +43,10 @@ dependencies:
   step_progress_indicator: ^0.2.5+8
   random_color: ^1.0.5
   firebase_storage: ^7.0.0
-
+  tflite: ^1.1.1
+  camera: ^0.7.0+2
+  percent_indicator: ^2.1.9+1
+  image_picker: ^0.6.7+22
 
 dev_dependencies:
   flutter_test:
