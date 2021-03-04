@@ -1,11 +1,10 @@
+import 'package:calcam/Utils/Logger.dart';
+import 'package:calcam/services/recognizer.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:calcam/Utils/Logger.dart';
-import 'package:calcam/services/recognizer.dart';
-
-class CameraLoader {
+class CameraHelper {
   static CameraController camera;
 
   static bool isDetecting = false;
@@ -34,11 +33,11 @@ class CameraLoader {
           "_initializeCamera", "Camera initialized, starting camera stream..");
 
       camera.startImageStream((CameraImage image) {
-        if (!TFLiteHelper.modelLoaded) return;
+        if (!RecognitionClassifier.modelLoaded) return;
         if (isDetecting) return;
         isDetecting = true;
         try {
-          TFLiteHelper.classifyImage(image);
+          RecognitionClassifier.classifyImage(image);
         } catch (e) {
           print(e);
         }

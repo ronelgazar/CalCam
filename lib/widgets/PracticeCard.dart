@@ -1,27 +1,27 @@
 
+import 'package:calcam/screens/Recognition.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flip_card/flip_card.dart';
 import 'package:calcam/Utils/RandomColor.dart';
 
 Widget practiceCard(Widget child){
-  return Card( 
-          elevation: 50, 
-          shadowColor: Colors.black, 
-          color: getRandomColor(), 
-          child: SizedBox( 
-            width: 300, 
-            height: 500, 
-            child: Padding( 
-              padding: const EdgeInsets.all(20.0), 
+  return FlipCard( 
+          
+          flipOnTouch: true,
+          front: Container(
+              alignment: Alignment.center,
               child: Column( 
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [  //NetworkImage 
                  //SizedBox 
                   SizedBox( 
-                    width: 80, 
+                    width: 100, 
                     child: child
                     ), //RaisedButton                 ], 
-                ],), //Column 
+                ],),
+                 //Column 
             ), //Padding 
-          ), //SizedBox 
+          
+          back:RecognitionScreen()
         );
 }

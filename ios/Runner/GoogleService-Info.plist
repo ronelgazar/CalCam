@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>555764493924-dgoodnel3t3lqp9qqh41uchpu5d68t48.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.555764493924-dgoodnel3t3lqp9qqh41uchpu5d68t48</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>555764493924-tsqbcm8oho2bv16op9v1dvskbvq7ssal.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyANKj2Xy7iz2uIyVXFwqtJrei53bSitAbE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>555764493924</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.RonElgazar.calcam</string>
+	<key>PROJECT_ID</key>
+	<string>cal-cam-ed38b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cal-cam-ed38b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:555764493924:ios:897e29b6b296f937c27971</string>
+	<key>DATABASE_URL</key>
+	<string>https://cal-cam-ed38b-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

@@ -15,10 +15,11 @@ class _PracticeState extends State<Practice> {
     return new MaterialApp(
         home: Scaffold(
       appBar: practiceAppBar(context), //AppBar
-      body: Center(
+      body: Container(
+        alignment: Alignment.center,
+        child: practiceCard(loadLettersImage(context,'letters/'+generatelater()+'.png')),)),);
         /** Card Widget **/
-        child: practiceCard(loadLettersImage(context,'letters/'+generatelater()+'.png'),)),
-          ), //Card  //Center //Scaffold
-    ); //
+       
+           //Card  //Center //Scaffold/
   }
 }

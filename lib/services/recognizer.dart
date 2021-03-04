@@ -1,12 +1,11 @@
 import 'dart:async';
 
+import 'package:calcam/Utils/Logger.dart';
+import 'package:calcam/Utils/getResult.dart';
 import 'package:camera/camera.dart';
 import 'package:tflite/tflite.dart';
 
-import 'package:calcam/Utils/getResult.dart';
-import 'package:calcam/Utils/Logger.dart';
-
-class TFLiteHelper {
+class RecognitionClassifier {
 
   static StreamController<List<Result>> tfLiteResultsController = new StreamController.broadcast();
   static List<Result> _outputs = List();
@@ -27,9 +26,7 @@ class TFLiteHelper {
             bytesList: image.planes.map((plane) {
               return plane.bytes;
             }).toList(),
-            numResults: 5
-            // path: '/assets/test.png'
-            )
+            numResults: 5)
         .then((value) {
       if (value.isNotEmpty) {
         Logger.log("classifyImage", "Results loaded. ${value.length}");

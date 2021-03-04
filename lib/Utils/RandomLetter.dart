@@ -6,5 +6,4 @@ String generatelater(){
   var rng = new Random();
   // return rng.nextInt(Cons)
   return Constants.letters[rng.nextInt(Constants.letters.length)];
-
 }

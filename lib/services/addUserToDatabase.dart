@@ -1,11 +1,9 @@
 import 'package:calcam/Utils/getDocUid.dart';
 import 'package:calcam/screens/HomeScreen.dart';
 import 'package:calcam/services/authentication.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // Import the firebase_core and cloud_firestore plugi0n
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:calcam/services/authentication.dart';
 
 class AddUser extends StatelessWidget {
   final String name;
