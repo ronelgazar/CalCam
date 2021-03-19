@@ -1,12 +1,12 @@
 import 'package:calcam/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:calcam/widgets/progressBar.dart';
-
 Widget exit(BuildContext context){
   return Padding(padding: EdgeInsets.only(left: 16),
   child:
   IconButton(icon:Icon(Icons.close,color: Colors.black54),tooltip: 'חזור'  ,onPressed:() => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) =>HomeScreen()))));}
+
 
 
 Widget practiceAppBar(BuildContext context){

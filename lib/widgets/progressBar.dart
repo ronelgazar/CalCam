@@ -22,11 +22,11 @@ class _ProgressBatState extends State<ProgressBar> {
         setState((){
           
             if(currentStep>=ProgressBarConstants.PROGRESS_BAR_TOTAL_STEPS){
-              UpdateDoc('progress',currentStep);
+              updateDoc('progress',currentStep);
               return currentStep = 0;
               
               }
-            UpdateDoc('progress',currentStep);
+            updateDoc('progress',currentStep);
             return currentStep++;
         });
       },

@@ -17,3 +17,13 @@ class BuildTileConstants{
 
 
 }
+class    TopDecoration{
+    static final List<Color>  TOP_DECORATION_COLORS = [Colors.orange[900],
+             Colors.orange[800],
+             Colors.orange[400]];
+}
+class RecognitionAlignmentAndSizeAnimationConstants{
+  // static final WIDTH = 80;
+  // static final HEIGHT = 80;
+
+}

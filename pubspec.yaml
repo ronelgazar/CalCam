@@ -50,7 +50,13 @@ dependencies:
   flutter_bloc: ^6.1.2
   exif: ^1.0.3
   permission_handler: ^5.1.0+2
+
+
+
+
+
   flip_card: ^0.4.4
+  slimy_card: ^1.0.4
 
 dev_dependencies:
   flutter_test:

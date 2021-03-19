@@ -129,8 +129,8 @@ class _HomeScreenState extends State<HomeScreen>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>
                             [
-                              Text('ניתוח של הכתיבה', style: TextStyle(color: Colors.green)),
-                              Text('נתח את הכתיבה שלך', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 28.0)),
+                              Text('דו קרב', style: TextStyle(color: Colors.green)),
+                              Text('שחק עם חברים', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 28.0)),
                             ],
                           ),
                         ],
